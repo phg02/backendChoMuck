@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Welcome Muck</h1>
+    <p1>This is test <%= name%></p1>
+    <h2>This is Muck's friends</h2>
+    <%friends.forEach(friend =>{%>
+        <h3><%= friend%></h3>
+    <%})%>
+    <h2>Post</h2>
+    <form action="/profile" method="post">
+        <label for="name">Enter your name</label>   
+        <input type="text" name="name" id="name">
+        <input type="submit" value="Submit">
+    </form>
+    <h2>Get</h2>
+    <form action="/profile" method="get">
+        <label for="name">Enter your name</label>
+        <input type="text" name="name" id="name">
+        <input type="submit" value="Submit">
+    </form>
+    <%- include('partials/footer')%>
+    
+</body>
+</html>
